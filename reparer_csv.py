@@ -16,3 +16,14 @@ for ligne in lignes:
     if identifiant in vues:
         print(f"Doublon détecté : {ligne['nom']}")
     vues.add(identifiant)
+
+def age_valide(valeur_texte):
+    try:
+        return int(valeur_texte)
+    except ValueError:
+        return None  # on ne peut pas convertir -> valeur invalide
+
+for ligne in lignes:
+    age_converti = age_valide(ligne["age"])
+    if age_converti is None and ligne["age"] != "":
+        print(f"Âge invalide pour {ligne['nom']} : '{ligne['age']}'")
