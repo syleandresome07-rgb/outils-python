@@ -1,0 +1,36 @@
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+
+# Fichiers de logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.swp
+
+# Configurations locales
+*.env
+*.ini
+
+# Outils de packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE / éditeurs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
