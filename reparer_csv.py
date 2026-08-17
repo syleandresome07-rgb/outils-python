@@ -1,4 +1,5 @@
 import csv
+import json
 import time
 
 debut = time.time()
@@ -30,5 +31,14 @@ for ligne in lignes:
     age_converti = age_valide(ligne["age"])
     if age_converti is None and ligne["age"] != "":
         print(f"Âge invalide pour {ligne['nom']} : '{ligne['age']}'")
+
+donnees_propres = [
+    {"nom": "Awa", "age": 19, "filiere": "MPSI"},
+    {"nom": "Fatou", "age": 20, "filiere": "MPSI"},
+]
+
+with open("etudiants_propres.json", "w") as fichier:
+    json.dump(donnees_propres, fichier, indent=2, ensure_ascii=False)
+
 
 print(f"Temps : {time.time() - debut:.4f} secondes")
