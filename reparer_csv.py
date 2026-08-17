@@ -1,4 +1,7 @@
 import csv
+import time
+
+debut = time.time()
 
 with open("etudiants.csv", newline="") as fichier:
     lecteur = csv.DictReader(fichier)
@@ -27,3 +30,5 @@ for ligne in lignes:
     age_converti = age_valide(ligne["age"])
     if age_converti is None and ligne["age"] != "":
         print(f"Âge invalide pour {ligne['nom']} : '{ligne['age']}'")
+
+print(f"Temps : {time.time() - debut:.4f} secondes")
